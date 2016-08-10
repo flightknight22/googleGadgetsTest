@@ -19,8 +19,8 @@
      var hour = today.getHours();
      var salutation = "Afternoon";
 
-
-     html += '<img src="' + "https://uploads.cdn.reveldigital.com/301250%211470863834479.jpg" + '">';
+     var pictureURL = "https://uploads.cdn.reveldigital.com/301250%211470863834479.jpg";
+     html += '<img src="' + pictureURL + '">';
      element.innerHTML = html;
    }
    gadgets.util.registerOnLoadHandler(displayGreeting);
