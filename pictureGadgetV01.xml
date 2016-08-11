@@ -12,7 +12,8 @@
       gadgets.io.makeRequest(url, response, params);
     };
     function response(obj) { 
-      var jsondata = JSON.stringify(obj.data);
+      //var jsondata = JSON.stringify(obj.data);
+      var jsondata = JSON.parse(obj.data);
       document.getElementById('content_div').innerHTML = jsondata;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
