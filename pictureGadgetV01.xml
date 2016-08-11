@@ -3,8 +3,6 @@
   <ModulePrefs title="Preferences for __UP_myname__" height="400"/>
   <UserPref name="myphoto" display_name="Photo" default_value="http://doc.examples.googlepages.com/rowan-headshot.jpg"/>
   <UserPref name="mychoice" display_name="Show Photo?" datatype="bool" default_value="true"/>
-
-   </UserPref>
    <Content type="html"><![CDATA[
    <div id="content_div"></div>
    <script type="text/javascript">
