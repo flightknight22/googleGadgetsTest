@@ -13,7 +13,6 @@
     };
     function response(obj) { 
       var jsondata = JSON.stringify(obj.data);
-      var html = "";
       document.getElementById('content_div').innerHTML = jsondata;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
