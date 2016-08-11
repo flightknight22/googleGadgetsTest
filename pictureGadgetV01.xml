@@ -15,7 +15,7 @@
 
     function response(obj) { 
 
-alert(obj.count);
+      alert(obj.count);
       obj = JSON.parse(obj.data);
       var html = "";
       document.getElementById('content_div').innerHTML = obj.count;
