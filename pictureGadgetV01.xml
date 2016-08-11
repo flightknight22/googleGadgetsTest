@@ -16,7 +16,7 @@
     function response(obj) { 
       var jsonData = obj.data;
       for(index in jsonData) {
-        alert(JSON.stringify(jsonData[index]));
+        alert(typeof(JSON.stringify(jsonData[index])));
       }
       document.getElementById('content_div').innerHTML = JSON.parse(JSON.stringify(jsonData)).name;
      };
