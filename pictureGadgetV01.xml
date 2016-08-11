@@ -16,9 +16,11 @@
     function response(obj) { 
       var jsonData = obj.data;
       var html="";
-      alert("3");
+      var jsonObj = JSON.parse(JSON.stringify(jsonData[index]));
+      alert("4");
       //for(index in jsonData) {
-        html += JSON.stringify(jsonData[index][0])+"<br>";
+        html += jsonObj.id;
+        html += jsonObj("id");
       //}
       document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
      };
