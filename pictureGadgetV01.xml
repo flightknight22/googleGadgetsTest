@@ -13,8 +13,8 @@
     };
     function response(obj) { 
       //var jsondata = JSON.stringify(obj.data);
-      var jsondata = JSON.parse(obj.data);
-      document.getElementById('content_div').innerHTML = jsondata.name;
+      var jsondata = gadgets.json.stringify(obj.data);
+      document.getElementById('content_div').innerHTML = jsondata;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
