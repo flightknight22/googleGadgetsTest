@@ -18,12 +18,12 @@
       var html="";
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
-      var newestValue=0;
-      alert("3");
+      var newestValue = 0;
+      alert("4");
       alert(jsonObj[0].id);
       for(index in jsonObj) 
       {
-        if(jsonObj[index].group_id==uVBpt_V2xSY)
+        if(jsonObj[index].group_id=="uVBpt_V2xSY")
         {
           if(parseInt(jsonObj[index].name)>newestValue))
           {
@@ -32,7 +32,7 @@
           }
         }
       }
-      document.getElementById('content_div').innerHTML = srcURL;//JSON.parse(JSON.stringify(jsonData)).name;
+      document.getElementById('content_div').innerHTML = srcURL;
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
