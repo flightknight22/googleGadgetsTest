@@ -14,9 +14,11 @@
     };
 
     function response(obj) { 
-      var jsondata = JSON.stringify(obj.data);
+
+alert(obj.count);
+      obj = JSON.parse(obj.data);
       var html = "";
-      document.getElementById('content_div').innerHTML = jsondata;
+      document.getElementById('content_div').innerHTML = obj.count;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
