@@ -25,7 +25,7 @@
      var time = today.getTime();
      var html = "";
      var photo= "https://uploads.cdn.reveldigital.com/301250%211470863834479.jpg";
-
+     var parsedJsonDisplay="F";
      // Based on the time of day, display an appropriate greeting
      var hour = today.getHours();
      var salutation = "Afternoon";
@@ -43,11 +43,12 @@
 
      // Display a greeting based on the myname userpref
      html += "<br><FONT SIZE=6>Good " + salutation + ", " +
-           prefs.getString("myname") + "!!!<br><br></FONT>";
+           parsedJsonDisplay + "!!!<br><br></FONT>";
 
      // If the "Show Photo?" checkbox is checked, display photo.
      if (prefs.getBool("mychoice") == true) {
        html += '<img src="' + photo + '">';
+       //html += '<img src="' + prefs.getString("myphoto") + '">';
      }
      element.innerHTML = html;
    }
