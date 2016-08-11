@@ -14,7 +14,8 @@
     function response(obj) { 
       //var jsondata = JSON.stringify(obj.data);
       var jsondata = gadgets.json.stringify(obj.data);
-      document.getElementById('content_div').innerHTML = gadgets.json.parse(jsondata);
+      var jsondataParsed = gadgets.json.parse(jsondata);
+      document.getElementById('content_div').innerHTML = jsondataParsed.name;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
