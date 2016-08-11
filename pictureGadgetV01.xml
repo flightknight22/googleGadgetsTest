@@ -14,12 +14,10 @@
     };
 
     function response(obj) { 
-
-      
       var jasonObj = JSON.parse(obj.data);
       var html = "";
-      alert(jasonObj.name);
-      document.getElementById('content_div').innerHTML = jasonObj.name;
+      alert(jasonObj);
+      document.getElementById('content_div').innerHTML = jasonObj;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
