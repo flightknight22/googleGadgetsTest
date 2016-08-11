@@ -17,9 +17,9 @@
       var jsonData = obj.data;
       var html="";
       var jsonObj = JSON.parse(JSON.stringify(jsonData[0]));
-      alert("5");
+      alert("6");
       //for(index in jsonData) {
-        //html += jsonObj.id;
+        html += jsonObj.id;
         //html += jsonObj("id");
       //}
       //document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
