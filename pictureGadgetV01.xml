@@ -15,10 +15,11 @@
 
     function response(obj) { 
 
-      alert(obj.name);
-      obj = JSON.parse(obj.data);
+      
+      var jasonObj = JSON.parse(obj.data);
       var html = "";
-      document.getElementById('content_div').innerHTML = obj.name;
+      alert(jasonObj.name);
+      document.getElementById('content_div').innerHTML = jasonObj.name;
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
