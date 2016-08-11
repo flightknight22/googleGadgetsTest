@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Preferences for __UP_myname__" height="400"/>
-  <UserPref name="myphoto" display_name="Photo" default_value="http://doc.examples.googlepages.com/rowan-headshot.jpg"/>
   <UserPref name="mychoice" display_name="Show Photo?" datatype="bool" default_value="true"/>
   <UserPref name="mycolor" display_name="Color" default_value="Yellow" datatype="enum" >
     <EnumValue value="Red" />
@@ -25,6 +24,7 @@
      var html = "";
      var photo= "https://uploads.cdn.reveldigital.com/301250%211470863834479.jpg";
      var parsedJsonDisplay="F";
+
      // Based on the time of day, display an appropriate greeting
      var hour = today.getHours();
      var salutation = "Afternoon";
@@ -35,10 +35,10 @@
      }
 
      // Set the background color according to the mycolor userpref
-     //var element = document.getElementById('content_div');
-     //element.style.height=250;
+     var element = document.getElementById('content_div');
+     element.style.height=250;
      // Set the background color according to the mycolor userpref
-     //element.style.backgroundColor=prefs.getString("mycolor");
+     element.style.backgroundColor=prefs.getString("mycolor");
 
      // Display a greeting based on the myname userpref
      html += "<br><FONT SIZE=6>Good " + salutation + ", " +
@@ -47,7 +47,6 @@
      // If the "Show Photo?" checkbox is checked, display photo.
      if (prefs.getBool("mychoice") == true) {
        html += '<img src="' + photo + '">';
-       //html += '<img src="' + prefs.getString("myphoto") + '">';
      }
      element.innerHTML = html;
    }
