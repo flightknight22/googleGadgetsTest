@@ -21,20 +21,6 @@
       for (var key in jsondata) {
         var value = jsondata[key];
         html += key + ": ";
-        // If 'value' is an array, render its contents as a bulleted list
-        if (value instanceof Array)
-        {
-          html += "<br /><ul>";
-          for (var i = 0; i < value.length ; i++)
-          {
-            html += "<li>"+ jsondata.Hobbies[i] + "</li>";
-          }
-          html+= "</ul>";
-        }  
-        // If 'value' isn't an array, just write it out as a string
-        else {        
-          html += value + "<br />";
-        }      
       }               
       document.getElementById('content_div').innerHTML = html;
      };
