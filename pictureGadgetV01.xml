@@ -5,18 +5,22 @@
   <![CDATA[
     <div id="content_div"></div>
     <script type="text/javascript">
+    
     function makeJSONRequest() {    
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       var url = "http://api.reveldigital.com/media?api_key=qJn8lmGlCIg&format=json&";
       gadgets.io.makeRequest(url, response, params);
     };
+    
     function response(obj) { 
-      //var jsondata = JSON.stringify(obj.data);
-      var jsondata = gadgets.json.stringify(obj.data);
-      var jsondataParsed = gadgets.json.parse(jsondata);
-      document.getElementById('content_div').innerHTML = jsondataParsed.name;
+      var jsonData = obj.data;
+      for(index in jsonData) {
+        alert(JSON.stringify(jsonData[index]));
+      }
+      //document.getElementById('content_div').innerHTML = 
      };
+     
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
   ]]>
