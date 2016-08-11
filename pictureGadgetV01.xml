@@ -17,7 +17,7 @@
       var jsonData = obj.data;
       var html="";
       for(index in jsonData) {
-        html += JSON.stringify(jsonData[index])+"<br>";
+        html += jsonData[index]+"<br>";
       }
       document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
      };
