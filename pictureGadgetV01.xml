@@ -18,7 +18,7 @@
       for(index in jsonData) {
         alert(JSON.stringify(jsonData[index]));
       }
-      //document.getElementById('content_div').innerHTML = 
+      document.getElementById('content_div').innerHTML = JSON.stringify(jsonData);
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
