@@ -10,7 +10,7 @@
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       // This URL returns a JSON-encoded string that represents a JavaScript object
-      var url = "http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/json-data.txt";
+      var url = "http://api.reveldigital.com/media?api_key=qJn8lmGlCIg&format=json&";
       gadgets.io.makeRequest(url, response, params);
     };
 
