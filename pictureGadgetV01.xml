@@ -21,7 +21,6 @@
       //for(index in jsonData) {
         //html += jsonObj.id;
         //html += jsonObj("id");
-        //
       //}
       //document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
      };
