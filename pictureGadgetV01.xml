@@ -16,6 +16,7 @@
     function response(obj) { 
       var jsonData = obj.data;
       var html="";
+      alert("1");
       for(index in jsonData) {
         html += jsonData[index]+"<br>";
       }
