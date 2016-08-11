@@ -16,8 +16,8 @@
     function response(obj) { 
       var jasonObj = JSON.parse(obj.data);
       var html = "";
-      alert(jasonObj);
-      document.getElementById('content_div').innerHTML = jasonObj;
+      //alert(jasonObj);
+      document.getElementById('content_div').innerHTML = JSON.stringify(jasonObj);
      };
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      </script>
