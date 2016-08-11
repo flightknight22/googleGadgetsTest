@@ -14,7 +14,7 @@
   };
   // Callback function to process the response
   function response(obj) {               
-    var responseText = obj.json;  
+    var responseText = obj.data;  
     var html = "<div style='padding: 5px;background-color: #FFFFBF;font-family:Arial, Helvetica;" 
     + "text-align:left;font-size:90%'>"; 
     // Output html in div.
