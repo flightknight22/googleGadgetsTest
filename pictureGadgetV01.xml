@@ -17,9 +17,9 @@
       var jsonData = obj.data;
       var html="";
       alert("3");
-      for(index in jsonData) {
+      //for(index in jsonData) {
         html += JSON.stringify(jsonData[index][0])+"<br>";
-      }
+      //}
       document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
      };
      
