@@ -50,8 +50,21 @@
      }
      element.innerHTML = html;
    }
-   // Pass the userprefs for this module instance to the function
-   // (allows users to include multiple module instances on their page)
+
+   function getHtml() {    
+     var params = {};  
+     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+     var url = "http://www.google.com";  
+     gadgets.io.makeRequest(url, response, params);
+   };
+   
+   function response(obj) {  
+     //obj.text contains the text of the page that was requested  
+     var str = obj.text;
+     var html =  str.substr(0,400);  
+     document.getElementById('content_div').innerHTML = html;
+   };
+   gadgets.util.registerOnLoadHandler(getHtml);
    gadgets.util.registerOnLoadHandler(displayGreeting);
 
    </script>
