@@ -16,9 +16,9 @@
     function response(obj) { 
       var jsonData = obj.data;
       var html="";
-      alert("1");
+      alert("2");
       for(index in jsonData) {
-        html += jsonData[index]+"<br>";
+        html += JSON.stringify(jsonData[index])+"<br>";
       }
       document.getElementById('content_div').innerHTML = html;//JSON.parse(JSON.stringify(jsonData)).name;
      };
