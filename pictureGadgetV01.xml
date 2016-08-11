@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Fetch Text Example"/>
+  <ModulePrefs title="Fetch JSON Example"/>
   <Content type="html">
   <![CDATA[
-  <div id="content_div"></div>
-  <script type="text/javascript">
+    <div id="content_div"></div>
+    <script type="text/javascript">
 
-  function getContacts() {
-    var params = {};  
-    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;  
-    var url = "http://api.reveldigital.com/media?api_key=qJn8lmGlCIg&format=json&";
-    gadgets.io.makeRequest(url, response, params);
-  };
-  // Callback function to process the response
-  function response(obj) {               
-    var responseText = obj.data;  
-    var html = "<div style='padding: 5px;background-color: #FFFFBF;font-family:Arial, Helvetica;" 
-    + "text-align:left;font-size:90%'>"; 
-    // Output html in div.
-    document.getElementById('content_div').innerHTML = html;
-  }
-  gadgets.util.registerOnLoadHandler(getContacts);
+    function makeJSONRequest() {    
+      var params = {};
+      params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+      // This URL returns a JSON-encoded string that represents a JavaScript object
+      var url = "http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/json-data.txt";
+      gadgets.io.makeRequest(url, response, params);
+    };
 
- </script>
+    function response(obj) { 
+      var jsondata = obj.data;
+      var html = "";
+      // Process returned JS object as an associative array
+      for (var key in jsondata) {
+        var value = jsondata[key];
+        html += key + ": ";
+        // If 'value' is an array, render its contents as a bulleted list
+        if (value instanceof Array)
+        {
+          html += "<br /><ul>";
+          for (var i = 0; i < value.length ; i++)
+          {
+            html += "<li>"+ jsondata.Hobbies[i] + "</li>";
+          }
+          html+= "</ul>";
+        }  
+        // If 'value' isn't an array, just write it out as a string
+        else {        
+          html += value + "<br />";
+        }      
+      }               
+      document.getElementById('content_div').innerHTML = html;
+     };
+     gadgets.util.registerOnLoadHandler(makeJSONRequest);
+     </script>
   ]]>
   </Content>
 </Module>
