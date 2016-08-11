@@ -3,14 +3,7 @@
   <ModulePrefs title="Preferences for __UP_myname__" height="400"/>
   <UserPref name="myphoto" display_name="Photo" default_value="http://doc.examples.googlepages.com/rowan-headshot.jpg"/>
   <UserPref name="mychoice" display_name="Show Photo?" datatype="bool" default_value="true"/>
-  <UserPref name="mycolor" display_name="Color" default_value="Yellow" datatype="enum" >
-    <EnumValue value="Red" />
-     <EnumValue value="Aqua" />
-     <EnumValue value="Lime" />
-     <EnumValue value="Yellow" />
-     <EnumValue value="Pink" />
-     <EnumValue value="Orange" />
-     <EnumValue value="White" />
+
    </UserPref>
    <Content type="html"><![CDATA[
    <div id="content_div"></div>
@@ -35,10 +28,10 @@
      }
 
      // Set the background color according to the mycolor userpref
-     var element = document.getElementById('content_div');
-     element.style.height=250;
+     //var element = document.getElementById('content_div');
+     //element.style.height=250;
      // Set the background color according to the mycolor userpref
-     element.style.backgroundColor=prefs.getString("mycolor");
+     //element.style.backgroundColor=prefs.getString("mycolor");
 
      // Display a greeting based on the myname userpref
      html += "<br><FONT SIZE=6>Good " + salutation + ", " +
