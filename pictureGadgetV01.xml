@@ -15,7 +15,7 @@
     var lastUrl = "";
     
     setTimeout(makeJSONRequest(), parseInt(prefs.getString("myrefresh")))
-    
+    alert(parseInt(prefs.getString("myrefresh")));
     function makeJSONRequest() {    
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
@@ -29,7 +29,7 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("9");
+      alert("10");
       for(index in jsonObj) 
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
@@ -41,13 +41,13 @@
           }
         }
       }
-      if(srcURL!=lastUrl)
-      {
+      //if(srcURL!=lastUrl)
+      //{
         alert("There Was A Change");
         html += '<img src="' + srcURL + '">';
         document.getElementById('content_div').innerHTML = html;
-      }
-      setTimeout(makeJSONRequest(), parseInt(prefs.getString("myrefresh")))
+      //}
+      //setTimeout(makeJSONRequest(), parseInt(prefs.getString("myrefresh")))
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
