@@ -26,7 +26,7 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("7");
+      alert("8");
       for(index in jsonObj) 
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
