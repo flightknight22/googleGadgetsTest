@@ -25,14 +25,15 @@
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
         {
-          if(parseInt(jsonObj[index].name)>newestValue))
-          {
-            var srcURL=jsonObj[index].file_url;
-            var newestValue=parseInt(jsonObj[index].name);
-          }
+          alert(jsonObj[index].name);
+          //if(parseInt(jsonObj[index].name)>newestValue))
+          //{
+          //  var srcURL=jsonObj[index].file_url;
+          //  var newestValue=parseInt(jsonObj[index].name);
+          //}
         }
       }
-      document.getElementById('content_div').innerHTML = srcURL;
+      //document.getElementById('content_div').innerHTML = srcURL;
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
