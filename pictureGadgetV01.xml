@@ -11,7 +11,7 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-    setInterval(makeJSONRequest, parseInt(prefs.getString("myrefresh")));
+    //setInterval(makeJSONRequest, parseInt(prefs.getString("myrefresh")));
     var prefs = new gadgets.Prefs();
     var lastUrl = "";
     
@@ -28,7 +28,7 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("11");
+      alert("12");
       for(index in jsonObj) 
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
