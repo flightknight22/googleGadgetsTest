@@ -19,19 +19,20 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("5");
+      alert("6");
       for(index in jsonObj) 
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
         {
-          //if(parseInt(jsonObj[index].name)>newestValue))
-          //{
+          if(parseInt(jsonObj[index].name)>newestValue)
+          {
+            alert(Date.parse(parseInt(jsonObj[index].uploaded_on)));
             var srcURL=jsonObj[index].file_url;
             var newestValue=parseInt(jsonObj[index].name);
-          //}
+          }
         }
       }
-      //document.getElementById('content_div').innerHTML = srcURL;
+      document.getElementById('content_div').innerHTML = srcURL;
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
