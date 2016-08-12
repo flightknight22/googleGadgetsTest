@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Fetch JSON Example"/>
+  <UserPref name="_table_query_refresh_interval" display_name="Query Interval" default_value="300">
+  <UserPref name="myapi" display_name="API Key" default_value=""/>
+  <UserPref name="mywidth" display_name="Width" default_value="500"/>
+  <UserPref name="myheight" display_name="Height" default_value="500"/>
+  </UserPref>
   <Content type="html">
   <![CDATA[
     <div id="content_div"></div>
     <script type="text/javascript">
     
+    var prefs = new gadgets.Prefs();
+    
     function makeJSONRequest() {    
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
-      var url = "http://api.reveldigital.com/media?api_key=qJn8lmGlCIg&format=json&";
+      var url = "http://api.reveldigital.com/media?api_key="+prefs.getString("myapi")+"&format=json&";
       gadgets.io.makeRequest(url, response, params);
     };
     
@@ -26,7 +33,6 @@
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
-            alert(Date.parse(parseInt(jsonObj[index].uploaded_on)));
             var srcURL=jsonObj[index].file_url;
             var newestValue=parseInt(jsonObj[index].name);
           }
