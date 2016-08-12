@@ -32,7 +32,8 @@
           }
         }
       }
-      document.getElementById('content_div').innerHTML = srcURL;
+      html += '<img src="' + srcURL + '">';
+      document.getElementById('content_div').innerHTML = html;
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
