@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Fetch JSON Example"/>
-  <UserPref name="_table_query_refresh_interval" display_name="Query Interval" default_value="300">
+  <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300">
   <UserPref name="myapi" display_name="API Key" default_value=""/>
   <UserPref name="mywidth" display_name="Width" default_value="500"/>
   <UserPref name="myheight" display_name="Height" default_value="500"/>
@@ -11,7 +11,10 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-    var prefs = new gadgets.Prefs();
+    var prefs = new gadgets.Prefs()
+    var lastUrl = "";
+    
+    setTimeout(makeJSONRequest(), parseInt(prefs.getString("myrefresh")))
     
     function makeJSONRequest() {    
       var params = {};
@@ -38,8 +41,12 @@
           }
         }
       }
-      html += '<img src="' + srcURL + '">';
-      document.getElementById('content_div').innerHTML = html;
+      if(srcURL!=lastUrl)
+      {
+        html += '<img src="' + srcURL + '">';
+        document.getElementById('content_div').innerHTML = html;
+      }
+      setTimeout(makeJSONRequest(), parseInt(prefs.getString("myrefresh")))
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
