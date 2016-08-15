@@ -25,6 +25,13 @@
     };
     
     function response(obj) { 
+      alert("response");
+      var jsonData = obj.data;
+      var html="";
+      var jsonObj = JSON.parse(JSON.stringify(jsonData));
+      var srcURL="no url found";
+      var newestValue = 0;
+
 
      };
      
