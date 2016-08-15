@@ -17,7 +17,7 @@
     //setInterval(makeJSONRequest, 15000);
     var lastUrl = "";
     
-    alert("17");
+    alert("18");
     
     function makeJSONRequest() {    
       var params = {};
