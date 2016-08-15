@@ -36,13 +36,11 @@
     };
     
     function response(obj) { 
-      alert("response");
       var jsonData = obj.data;
       var html="";
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("122");
       for(index in jsonObj) 
       {
         if(jsonObj[index].group_id=="uVBpt_V2xSY")
@@ -56,7 +54,6 @@
       }
       if(srcURL!=lastUrl)
       {
-        alert("There Was A Change");
         html += '<img src="' + srcURL + '"/>';
         document.getElementById('content_div').innerHTML = html;
         lastUrl=srcURL;
