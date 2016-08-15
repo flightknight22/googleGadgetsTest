@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Fetch JSON Example"/>
-  <UserPref name="myrefreshTimer" display_name="Refresh Interval(Seconds)" default_value="300">
+  <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300">
   <UserPref name="myapi" display_name="API Key" default_value=""/>
   <UserPref name="mygroup" display_name="Group Name" default_value="uVBpt_V2xSY"/>
   <UserPref name="mywidth" display_name="Width" default_value="500"/>
@@ -12,12 +12,10 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-
+    setInterval(makeJSONRequest, 15000);
+    //setInterval(makeJSONRequest(), parseInt(prefs.getString("myrefresh")));
     var prefs = new gadgets.Prefs();
-    //setInterval(makeJSONRequest, 15000);
     var lastUrl = "";
-    
-    alert("18");
     
     function makeJSONRequest() {    
       var params = {};
@@ -32,12 +30,11 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      alert("before");
+      alert("12");
       for(index in jsonObj) 
       {
-        if(jsonObj[index].group_id=="uVBpt_V2xSY")//prefs.getString("mygroup")
+        if(jsonObj[index].group_id=="uVBpt_V2xSY")
         {
-          
           if(parseInt(jsonObj[index].name)>newestValue)
           {
             srcURL=jsonObj[index].file_url;
@@ -45,10 +42,9 @@
           }
         }
       }
-      alert("Looking For Change");
       if(srcURL!=lastUrl)
       {
-        
+        alert("There Was A Change");
         html += '<img src="' + srcURL + '"width="'+prefs.getString("mywidth")+'" height="'+prefs.getString("myheight")+'">';
         document.getElementById('content_div').innerHTML = html;
         lastUrl=srcURL;
@@ -60,3 +56,5 @@
   ]]>
   </Content>
 </Module>
+
+
