@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Fetch JSON Example"/>
-  <UserPref name="myrefresh" display_name="Refresh Interval(Seconds)" default_value="300">
+  <UserPref name="myrefreshTimer" display_name="Refresh Interval(Seconds)" default_value="300">
   <UserPref name="myapi" display_name="API Key" default_value=""/>
   <UserPref name="mywidth" display_name="Width" default_value="500"/>
   <UserPref name="myheight" display_name="Height" default_value="500"/>
@@ -11,8 +11,9 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-    setInterval(makeJSONRequest, parseInt(prefs.getString("myrefresh"))*1000);
+
     var prefs = new gadgets.Prefs();
+    setInterval(makeJSONRequest, parseInt(prefs.getString("myrefreshTimer"))*1000);
     var lastUrl = "";
     
     function makeJSONRequest() {    
