@@ -12,7 +12,7 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-    setInterval(makeJSONRequest, 15000);
+    //setInterval(makeJSONRequest, 15000);
     var prefs = new gadgets.Prefs();
     var lastUrl = "";
     
@@ -56,13 +56,13 @@
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
      
-     function RevelDigital.Controller.onCommand(name, value) 
-     {
-      if(name=="UpdatePicture")
-      {
-        makeJSONRequest();
+     var RevelDigital = {
+       Controller: {
+          onCommand: function(name, value) {
+            makeJSONRequest();
+          }
       }
-     }
+    }
      </script>
   ]]>
   </Content>
