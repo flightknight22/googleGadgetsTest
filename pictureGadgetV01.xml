@@ -55,6 +55,14 @@
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
+     
+     function RevelDigital.Controller.onCommand(name, value) 
+     {
+      if(name=="UpdatePicture")
+      {
+        makeJSONRequest();
+      }
+     }
      </script>
   ]]>
   </Content>
