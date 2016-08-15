@@ -19,6 +19,7 @@
     
     function makeJSONRequest() {    
       var params = {};
+      alert("request");
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       var url = "http://api.reveldigital.com/media?api_key="+prefs.getString("myapi")+"&format=json&";
       gadgets.io.makeRequest(url, response, params);
