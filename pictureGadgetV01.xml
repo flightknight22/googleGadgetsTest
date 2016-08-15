@@ -9,6 +9,16 @@
   </UserPref>
   <Content type="html">
   <![CDATA[
+  
+  
+  <style type="text/css">
+  img
+  {
+    width: __UP_rdW__px;
+    height: __UP_rdH__px;
+  }
+  </style>
+
     <div id="content_div"></div>
     <script type="text/javascript">
     
@@ -46,7 +56,7 @@
       if(srcURL!=lastUrl)
       {
         alert("There Was A Change");
-        html += '<img src="' + srcURL + '"width="'+prefs.getString("mywidth")+'" height="'+prefs.getString("myheight")+'">';
+        html += '<img src="' + srcURL + '"/>';
         document.getElementById('content_div').innerHTML = html;
         lastUrl=srcURL;
       }
