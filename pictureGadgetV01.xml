@@ -46,6 +46,7 @@
         alert("There Was A Change");
         html += '<img src="' + srcURL + '"width="'+prefs.getString("mywidth")+'" height="'+prefs.getString("myheight")+'">';
         document.getElementById('content_div').innerHTML = html;
+        lastUrl=srcURL;
       }
      };
      
