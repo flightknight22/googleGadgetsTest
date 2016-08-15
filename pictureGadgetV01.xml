@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Fetch JSON Example">
-    <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300" />
-    <UserPref name="myapi" display_name="API Key" default_value="" />
-    <UserPref name="mygroup" display_name="Group Name" default_value="uVBpt_V2xSY" />
-    <UserPref name="mywidth" display_name="Width" default_value="500" />
-    <UserPref name="myheight" display_name="Height" default_value="500" />
-    <UserPref name="rdW" display_name="Width" required="true" default_value="280" datatype="hidden" />
-    <UserPref name="rdH" display_name="Height" required="true" default_value="190" datatype="hidden" />
-  </ModulePrefs>
+  <ModulePrefs title="Fetch JSON Example"/>
+  <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300" />
+  <UserPref name="myapi" display_name="API Key" default_value="" />
+  <UserPref name="mygroup" display_name="Group Name" default_value="uVBpt_V2xSY" />
+  <UserPref name="mywidth" display_name="Width" default_value="500" />
+  <UserPref name="myheight" display_name="Height" default_value="500" />
+  <UserPref name="rdW" display_name="Width" required="true" default_value="280" datatype="hidden" />
+  <UserPref name="rdH" display_name="Height" required="true" default_value="190" datatype="hidden" />
   <Content type="html">
   <![CDATA[
   
