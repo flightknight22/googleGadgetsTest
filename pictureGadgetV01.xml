@@ -13,7 +13,6 @@
     <script type="text/javascript">
     
     setInterval(makeJSONRequest, 15000);
-    //setInterval(makeJSONRequest(), parseInt(prefs.getString("myrefresh")));
     var prefs = new gadgets.Prefs();
     var lastUrl = "";
     
@@ -26,30 +25,7 @@
     };
     
     function response(obj) { 
-      var jsonData = obj.data;
-      var html="";
-      var jsonObj = JSON.parse(JSON.stringify(jsonData));
-      var srcURL="no url found";
-      var newestValue = 0;
-      alert("12");
-      for(index in jsonObj) 
-      {
-        if(jsonObj[index].group_id=="uVBpt_V2xSY")
-        {
-          if(parseInt(jsonObj[index].name)>newestValue)
-          {
-            srcURL=jsonObj[index].file_url;
-            newestValue=parseInt(jsonObj[index].name);
-          }
-        }
-      }
-      if(srcURL!=lastUrl)
-      {
-        alert("There Was A Change");
-        html += '<img src="' + srcURL + '"width="'+prefs.getString("mywidth")+'" height="'+prefs.getString("myheight")+'">';
-        document.getElementById('content_div').innerHTML = html;
-        lastUrl=srcURL;
-      }
+
      };
      
      gadgets.util.registerOnLoadHandler(makeJSONRequest);
