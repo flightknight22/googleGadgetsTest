@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Fetch JSON Example"/>
-  <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300">
+  <UserPref name="myrefresh" display_name="Refresh Interval(Seconds)" default_value="300">
   <UserPref name="myapi" display_name="API Key" default_value=""/>
   <UserPref name="mywidth" display_name="Width" default_value="500"/>
   <UserPref name="myheight" display_name="Height" default_value="500"/>
