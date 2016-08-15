@@ -36,8 +36,8 @@
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
-            var srcURL=jsonObj[index].file_url;
-            var newestValue=parseInt(jsonObj[index].name);
+            srcURL=jsonObj[index].file_url;
+            newestValue=parseInt(jsonObj[index].name);
           }
         }
       }
