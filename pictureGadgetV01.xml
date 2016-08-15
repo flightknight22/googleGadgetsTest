@@ -8,7 +8,7 @@
     <UserPref name="myheight" display_name="Height" default_value="500" />
     <UserPref name="rdW" display_name="Width" required="true" default_value="280" datatype="hidden" />
     <UserPref name="rdH" display_name="Height" required="true" default_value="190" datatype="hidden" />
-  </ModulePrefs>
+
   <Content type="html">
   <![CDATA[
   
