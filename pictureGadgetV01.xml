@@ -17,7 +17,7 @@
     setInterval(makeJSONRequest, 15000);
     var lastUrl = "";
     
-    alert("16");
+    alert("17");
     
     function makeJSONRequest() {    
       var params = {};
@@ -36,6 +36,7 @@
       {
         if(jsonObj[index].group_id==prefs.getString("mygroup"))
         {
+          
           if(parseInt(jsonObj[index].name)>newestValue)
           {
             srcURL=jsonObj[index].file_url;
@@ -43,8 +44,10 @@
           }
         }
       }
+      alert("Looking For Change");
       if(srcURL!=lastUrl)
       {
+        
         html += '<img src="' + srcURL + '"width="'+prefs.getString("mywidth")+'" height="'+prefs.getString("myheight")+'">';
         document.getElementById('content_div').innerHTML = html;
         lastUrl=srcURL;
