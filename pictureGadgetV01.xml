@@ -14,7 +14,7 @@
     
 
     var prefs = new gadgets.Prefs();
-    setInterval(makeJSONRequest, 15000);
+    //setInterval(makeJSONRequest, 15000);
     var lastUrl = "";
     
     alert("17");
