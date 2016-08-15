@@ -17,6 +17,8 @@
     setInterval(makeJSONRequest, parseInt(prefs.getString("myrefreshTimer"))*1000);
     var lastUrl = "";
     
+    alert("15");
+    
     function makeJSONRequest() {    
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
@@ -34,6 +36,7 @@
       {
         if(jsonObj[index].group_id==prefs.getString("mygroup"))
         {
+          alert("Comp");
           if(parseInt(jsonObj[index].name)>newestValue)
           {
             srcURL=jsonObj[index].file_url;
