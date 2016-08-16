@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Fetch JSON Example"/>
+  <ModulePrefs title="Fetch JSON Example" description="Basic gadget for displaying text" author="RevelDigital" background="transparent"/>
   <UserPref name="myrefresh" display_name="Refresh Interval" default_value="300" />
   <UserPref name="myapi" display_name="API Key" default_value="" />
   <UserPref name="mygroup" display_name="Group Name" default_value="uVBpt_V2xSY" />
@@ -13,6 +13,13 @@
   
   
   <style type="text/css">
+  body
+  {
+    background: transparent;
+    width: __UP_rdW__px;
+    height: __UP_rdH__px;
+    overflow: hidden;
+  }
   img
   {
     width: __UP_rdW__px;
