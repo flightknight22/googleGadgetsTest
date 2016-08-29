@@ -43,7 +43,7 @@
       var newestValue = 0;
       for(index in jsonObj) 
       {
-        if(jsonObj[index].group_id==prefs.getString("mygroup")
+        if(jsonObj[index].group_id=="uVBpt_V2xSY")
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
