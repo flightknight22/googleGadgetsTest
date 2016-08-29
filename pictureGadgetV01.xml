@@ -24,7 +24,6 @@
     <div id="content_div"></div>
     <script type="text/javascript">
     
-    //setInterval(makeJSONRequest, 15000);
     var prefs = new gadgets.Prefs();
     var lastUrl = "";
     
@@ -41,9 +40,14 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
+      var groupName = "uVBpt_V2xSY"
+      if(prefs.getString("mygroup")!=null || prefs.getString("mygroup")!="")
+      {
+        groupName = prefs.getString("mygroup");
+      }
       for(index in jsonObj) 
       {
-        if(jsonObj[index].group_id=="uVBpt_V2xSY")
+        if(jsonObj[index].group_id==groupName)
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
