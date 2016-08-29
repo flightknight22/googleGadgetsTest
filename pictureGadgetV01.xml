@@ -53,6 +53,7 @@
           }
         }
       }
+      alert("Working");
       if(srcURL!=lastUrl)
       {
         html += '<img src="' + srcURL + '"/>';
