@@ -47,6 +47,7 @@
       }
       for(index in jsonObj) 
       {
+        alert(jsonObj[index].file_name+"  "+groupName)
         if(jsonObj[index].file_name==groupName)
         {
           if(parseInt(jsonObj[index].name)>newestValue)
