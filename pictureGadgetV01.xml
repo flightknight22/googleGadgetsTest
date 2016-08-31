@@ -29,7 +29,6 @@
     var index=0;
     
     function makeJSONRequest() {   
-      alert("Function 1");
       var params = {};
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       var url = "http://api.reveldigital.com/media?api_key="+prefs.getString("myapi")+"&format=json&";
@@ -43,11 +42,11 @@
       var srcURL="no url found";
       var newestValue = 0;
       var groupName = "uVBpt_V2xSY";
-      alert("very outside");
       if(prefs.getString("mygroup")!=null || prefs.getString("mygroup")!="")
       {
         groupName = prefs.getString("mygroup");
       }
+      alert("very outside 1");
       for(index in jsonObj) 
       {
         
