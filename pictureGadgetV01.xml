@@ -50,9 +50,9 @@
         
         if(jsonObj[index].file_name==groupName)
         {
-          alert(jsonObj[index].file_name+"  "+groupName)
           if(parseInt(jsonObj[index].name)>newestValue)
           {
+            alert("Hit 2");
             srcURL=jsonObj[index].file_url;
             newestValue=parseInt(jsonObj[index].name);
           }
