@@ -44,7 +44,7 @@
       var groupName = "uVBpt_V2xSY";
       if(prefs.getString("mygroup")!=null || prefs.getString("mygroup")!="")
       {
-        groupName = prefs.getString("mygroup");
+        groupName = prefs.getString("mygroup")+".png";
       }
       for(index in jsonObj) 
       {
