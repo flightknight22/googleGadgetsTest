@@ -46,10 +46,9 @@
       {
         groupName = prefs.getString("mygroup");
       }
-      alert("very outside 1");
       for(index in jsonObj) 
       {
-        if(jsonObj[index].file_name===groupName)
+        if(jsonObj[index].file_name==groupName)
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
