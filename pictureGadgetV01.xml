@@ -49,8 +49,8 @@
       alert("very outside 1");
       for(index in jsonObj) 
       {
-        alert(jsonObj[index].file_name+"=="+groupName);
-        if(jsonObj[index].file_name==groupName)
+        alert(jsonObj[index].file_name+"==="+groupName);
+        if(jsonObj[index].file_name===groupName)
         {
           alert("Hit 1");
           if(parseInt(jsonObj[index].name)>newestValue)
