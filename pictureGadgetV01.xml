@@ -41,7 +41,8 @@
       var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
-      var groupName = "uVBpt_V2xSY";
+      var groupName = "price";
+      alert("Working");
       if(prefs.getString("mygroup")!=null || prefs.getString("mygroup")!="")
       {
         groupName = prefs.getString("mygroup")+".png";
@@ -68,7 +69,7 @@
      var RevelDigital = {
        Controller: {
           onCommand: function(name, value) {
-
+              alert("Command!!");
               makeJSONRequest();
             
           }
