@@ -42,7 +42,6 @@
       var srcURL="no url found";
       var newestValue = 0;
       var groupName = "price";
-      alert("Working");
       if(prefs.getString("mygroup")!=null || prefs.getString("mygroup")!="")
       {
         groupName = prefs.getString("mygroup")+".png";
@@ -55,7 +54,6 @@
           {
             srcURL=jsonObj[index].file_url;
             srcURL="https://uploads.reveldigital.com"+srcURL.slice(36);
-            alert(srcURL);
             newestValue=parseInt(jsonObj[index].name);
           }
         }
@@ -71,7 +69,6 @@
      var RevelDigital = {
        Controller: {
           onCommand: function(name, value) {
-              alert("Command!!");
               makeJSONRequest();
           }
       }
