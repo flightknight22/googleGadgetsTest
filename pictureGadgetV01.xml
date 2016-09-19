@@ -54,7 +54,7 @@
           if(parseInt(jsonObj[index].name)>newestValue)
           {
             srcURL=jsonObj[index].file_url;
-            srcURL="https://uploads.reveldigital.com"+srcURL.slice(37);
+            srcURL="https://uploads.reveldigital.com"+srcURL.slice(36);
             alert(srcURL);
             newestValue=parseInt(jsonObj[index].name);
           }
