@@ -49,12 +49,12 @@
       }
       for(index in jsonObj) 
       {
-        alert(jsonObj[index].file_name+"=="+groupName);
         if(jsonObj[index].file_name==groupName)
         {
           if(parseInt(jsonObj[index].name)>newestValue)
           {
             srcURL=jsonObj[index].file_url;
+            alert(srcURL.slice(0,36));
             newestValue=parseInt(jsonObj[index].name);
           }
         }
