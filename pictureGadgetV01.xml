@@ -55,6 +55,7 @@
           {
             srcURL=jsonObj[index].file_url;
             srcURL="https://uploads.reveldigital.com"+srcURL.slice(37);
+            alert(srcURL);
             newestValue=parseInt(jsonObj[index].name);
           }
         }
