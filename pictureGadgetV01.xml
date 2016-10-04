@@ -38,8 +38,7 @@
     function response(obj) { 
       var jsonData = obj.data;
       var html="";
-      alert(jsonData);
-      //var jsonObj = JSON.parse(JSON.stringify(jsonData));
+      var jsonObj = JSON.parse(JSON.stringify(jsonData));
       var srcURL="no url found";
       var newestValue = 0;
       var groupName = "price";
